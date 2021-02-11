@@ -141,7 +141,7 @@ services:
       - IPC_LOCK
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.6.1
+    image: docker.elastic.co/kibana/kibana:7.11.0
     environment:
       ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
       XPACK_MONITORING_ENABLED: "true"
