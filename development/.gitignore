@@ -1,0 +1,14 @@
+.idea/
+*.iml
+*.lock
+node_modules
+logs/
+/volumes/
+.DS_Store
+permissioning-smart-contracts/
+/config/besu/networkFiles/node*/data/
+/config/besu/networkFiles/validator*/data/
+/config/besu/networkFiles/bootnode/data/
+/config/besu/networkFiles/rpcnode/data/
+config/besu/ibft2GenesisPermissioning.json
+.vscode/

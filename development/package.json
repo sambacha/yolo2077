@@ -1,0 +1,22 @@
+{
+  "name": "@yfi/testnet",
+  "version": "1.0.0",
+  "description": "test net ",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ethereumjs-util": "^7.0.8",
+    "shellcheck": "^0.4.4",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@alethio/cms-plugin-tool": "^1.0.0-beta.5"
+  }
+}
