@@ -1,0 +1,20 @@
+{
+  "name": "yolo2077",
+  "version": "1.0.0",
+  "description": "CMD java -XX:+PrintFlagsFinal $JAVA_OPTIONS -jar java-container.jar -e JAVA_OPTIONS='-Xmx300m' -XX:+UnlockExperimentalVMOptions  -XX:+UseCGroupMemoryLimitForHeap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambacha/yolo2077.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sambacha/yolo2077/issues"
+  },
+  "homepage": "https://github.com/sambacha/yolo2077#readme"
+}
