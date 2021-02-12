@@ -1,21 +1,4 @@
-#!/usr/bin/env bash
-# we could set  #!/bin/bash
-# pipefail disabled cause reasoons here 
-# set -eo pipefail
- 
-# /**  Fresh System (We Assume) */
-echo "==============================="
-echo "==> Setting up host system..."
-echo "==============================="
-cp $HOME/yolo2077/bash_profile $HOME/.bash_profile
-# sanity check for shell env
-whereis bash
-bash --version
-source ~/.bash_profile 
-echo "==============================="
-echo "==> Bash Profile Loaded        "
-echo "==============================="
-
+#!/bin/sh
 sudo apt-get update  -qq
 sudo apt-get upgrade -y -qq
 sudo apt update -qq
@@ -83,30 +66,7 @@ sudo apt install software-properties-common zlib1g-dev libncurses5-dev libgdbm-d
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.7 -y -qq 
+
+sudo apt install python3.7-pip -y -qq 
+sudo apt install python-pip -y -qq 
 sudo apt-get install libssl-dev openssl -y 
-
-echo "==> Docker, we are almost done i promise    "
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-
-curl -fsSL https://get.docker.com -o get-docker.sh
-
-sudo sh get-docker.sh
-
-#change uubuntu to whatever user name u have
-sudo usermod -aG docker ubuntu
-sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
-sudo chmod g+rwx "$HOME/.docker" -R
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-echo "==> I lied, we are not almost done   "
-sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
-sudo ufw allow 'Nginx HTTP'
-sudo ufw status
-
-ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
-echo "Host's IP Address..."
-curl -4 icanhazip.com
-echo "Welcome $USER to YOLO2077 "
