@@ -223,7 +223,7 @@ services:
         ipv4_address: 172.24.2.19
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.11.0
+    image: docker.elastic.co/kibana/kibana:7.12.0
     environment:
       ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
       XPACK_MONITORING_ENABLED: "true"
