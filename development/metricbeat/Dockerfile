@@ -1,4 +1,4 @@
-FROM docker.elastic.co/beats/metricbeat:7.11.0
+FROM docker.elastic.co/beats/metricbeat:7.13.2
 
 ENV IP_ADDRESS "127.0.0.1"
 ENV REDIS_HOST localhost
